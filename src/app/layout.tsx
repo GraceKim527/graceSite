@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-
+import '../styles/globals.css'
 const pretendard = localFont({
-  
   src: [
     {
       path: '../../public/fonts/pretendard/Pretendard-Thin.woff2',
@@ -24,7 +23,7 @@ const pretendard = localFont({
       weight: '400',
       style: 'normal',
     },
-    
+
     {
       path: '../../public/fonts/pretendard/Pretendard-Medium.woff2',
       weight: '500',

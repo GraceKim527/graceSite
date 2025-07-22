@@ -1,9 +1,10 @@
-import Image from 'next/image'
+import { Introduce } from "@/features/home/Introduce"
 
 export default function Home() {
   return (
-    <>
-    asdf
-    </>
+    <div className="h-screen bg-black">
+      <Introduce /> 
+
+    </div>
   )
 }

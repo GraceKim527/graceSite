@@ -1,0 +1,10 @@
+.grace-border,
+.kim-border {
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+  
+}
+
+.text-white {
+  color: white;
+}
