@@ -2,7 +2,11 @@
 .kim-border {
   -webkit-text-stroke: 1px white;
   color: transparent;
-  
+}
+
+.portfolio-border {
+  -webkit-text-stroke: 1px oklch(0.446 0.03 256.802);
+  color: transparent;
 }
 
 .text-white {
