@@ -31,7 +31,7 @@ export default function ScrambleTextLayer() {
         chars: 'upperCase',
         speed: 0.5,
       },
-      duration: 3,
+      duration: 4,
       ease: 'power1.inOut',
     })
 
@@ -41,7 +41,7 @@ export default function ScrambleTextLayer() {
         chars: 'upperCase',
         speed: 0.5,
       },
-      duration: 3,
+      duration: 4,
       ease: 'power1.inOut',
       delay: 0.1,
     })
