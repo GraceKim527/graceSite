@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function AboutSection() {
+export default function AboutScene() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
@@ -97,10 +97,7 @@ export default function AboutSection() {
   }, [])
 
   return (
-    <section
-      ref={sectionRef}
-      className="align-center relative flex min-h-screen justify-center bg-gray-950"
-    >
+    <section ref={sectionRef} className="align-center relative flex min-h-screen justify-center">
       <div className="container m-auto px-8 py-12">
         <div className="mb-12 text-center">
           <div ref={titleRef} className="mb-8">
