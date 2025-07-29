@@ -30,7 +30,7 @@ export default function IntroScene() {
       .fromTo(
         devRef.current,
         { x: 20, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5, ease: 'power4.out' },
+        { x: 0, opacity: 1, duration: 0.3, ease: 'power4.out' },
         '+=0.1',
       )
 
@@ -54,8 +54,16 @@ export default function IntroScene() {
         '+=0.1',
       )
 
-      // .set([frontendRef.current, devRef.current], { fontSize: 120, opacity: 1 }, '+=0.1')
-
+      .to(
+        [frontendRef.current, devRef.current],
+        {
+          fontSize: '120px',
+          opacity: 1,
+          duration: 0.3,
+          ease: 'power4.out',
+        },
+        '+=0.1',
+      )
       .fromTo(
         kimRef.current,
         { x: 500, scaleX: 2, opacity: 0 },
@@ -71,7 +79,7 @@ export default function IntroScene() {
             kimRef.current?.classList.add('text-white')
           },
         },
-        '+=0.3',
+        '+=0.1',
       )
   }, [])
 
@@ -80,15 +88,15 @@ export default function IntroScene() {
       <div className="flex items-center gap-10">
         <div
           ref={frontendRef}
-          className="pointer-events-none text-[180px] font-black tracking-tight"
+          className="pointer-events-none text-[160px] font-black tracking-tight"
         >
           FRONTEND
         </div>
-        <div ref={devRef} className="pointer-events-none text-[180px] font-black tracking-tight">
+        <div ref={devRef} className="pointer-events-none text-[160px] font-black tracking-tight">
           DEV
         </div>
       </div>
-      <div className="flex justify-start gap-2">
+      <div className="flex justify-start gap-10">
         <div
           ref={graceRef}
           className="grace-border pointer-events-none text-[120px] font-black tracking-tight text-transparent transition-all"

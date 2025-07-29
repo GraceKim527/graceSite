@@ -27,7 +27,7 @@ export default function ScrambleTextLayer() {
     )
     gsap.to(line1Ref.current, {
       scrambleText: {
-        text: 'React · Next.js · TypeScript · Tailwind CSS',
+        text: 'React · Next.js · TypeScript · Tailwind CSS · React-Query',
         chars: 'upperCase',
         speed: 0.5,
       },
@@ -48,7 +48,7 @@ export default function ScrambleTextLayer() {
   }, [])
 
   return (
-    <div className="absolute top-1/2 right-10 -translate-y-1/2 text-right text-lg font-semibold tracking-wide text-gray-700 opacity-80">
+    <div className="absolute top-1/3 right-10 -translate-y-1/2 text-right text-lg font-semibold tracking-wide text-gray-700 opacity-80">
       <div ref={titleRef} className="mb-2 text-xs tracking-widest text-gray-500">
         FRONTEND · DEV · LEADER · UX
       </div>

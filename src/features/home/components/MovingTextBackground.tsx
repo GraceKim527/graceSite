@@ -45,7 +45,7 @@ export default function MovingTextBackground() {
         GRACE KIM
       </div>
       <div className="mr-100 scale-y-70 transform leading-tight tracking-tight text-gray-300">
-        THE BADDEST DO
+        THE BEST
       </div>
       <div className="mr-100 scale-y-70 transform leading-tight tracking-tight text-gray-500">
         GRACE KIM
