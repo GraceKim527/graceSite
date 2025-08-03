@@ -108,7 +108,7 @@ export default function AboutScene() {
       <div className="container m-auto px-8">
         <div className="mb-6 text-center">
           <div ref={titleRef} className="mb-8">
-            <h2 className="mb-4 text-5xl font-black text-gray-600 lg:text-6xl">
+            <h2 className="mb-4 text-4xl font-black text-gray-600 lg:text-5xl">
               About
               <span className="block bg-gradient-to-r from-purple-500 to-violet-700 bg-clip-text text-transparent">
                 Grace Kim
@@ -118,12 +118,12 @@ export default function AboutScene() {
 
           <div ref={imageRef} className="mb-8 flex justify-center">
             <div className="relative">
-              <div className="h-40 w-40 overflow-hidden rounded-full shadow-2xl lg:h-60 lg:w-60">
+              <div className="h-30 w-30 overflow-hidden rounded-full shadow-2xl lg:h-40 lg:w-40">
                 <Image
                   src="/image/me.jpg"
                   alt="Grace Kim"
-                  width={240}
-                  height={240}
+                  width={180}
+                  height={180}
                   className="h-full w-full object-cover"
                 />
               </div>

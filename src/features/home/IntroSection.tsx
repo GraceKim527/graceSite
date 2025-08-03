@@ -1,8 +1,8 @@
 'use client'
 
-import ScrambleTextLayer from './components/ScrambleTextLayer'
-import IntroScene from './components/IntroScene'
-import MovingTextBackground from './components/MovingTextBackground'
+import ScrambleTextLayer from './components/intro/ScrambleTextLayer'
+import IntroScene from './components/intro/IntroScene'
+import MovingTextBackground from './components/intro/MovingTextBackground'
 
 export function IntroSection() {
   return (

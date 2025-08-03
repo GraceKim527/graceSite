@@ -1,7 +1,7 @@
 'use client'
 
-import AboutScene from './components/AboutScene'
-import CodeScrambleBackground from './components/CodeScrambleBackground'
+import AboutScene from './components/about/AboutScene'
+import CodeScrambleBackground from './components/about/CodeScrambleBackground'
 
 export function AboutSection() {
   return (

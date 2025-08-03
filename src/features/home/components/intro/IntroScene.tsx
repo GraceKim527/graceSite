@@ -3,7 +3,7 @@
 
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import './style.css'
+import '../style.css'
 
 export default function IntroScene() {
   const frontendRef = useRef<HTMLDivElement>(null)
