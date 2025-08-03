@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Image from 'next/image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -22,9 +23,12 @@ export default function AboutScene() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: 'top 80%',
+        start: 'top 85%',
         end: 'bottom 15%',
         toggleActions: 'play none none reverse',
+        scrub: false,
+        refreshPriority: -1,
+        anticipatePin: 1,
       },
     })
 
@@ -97,9 +101,12 @@ export default function AboutScene() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="align-center relative flex min-h-screen justify-center">
-      <div className="container m-auto px-8 py-12">
-        <div className="mb-12 text-center">
+    <section
+      ref={sectionRef}
+      className="m-auto flex min-h-screen w-[80%] items-center justify-center"
+    >
+      <div className="container m-auto px-8">
+        <div className="mb-6 text-center">
           <div ref={titleRef} className="mb-8">
             <h2 className="mb-4 text-5xl font-black text-gray-600 lg:text-6xl">
               About
@@ -112,7 +119,13 @@ export default function AboutScene() {
           <div ref={imageRef} className="mb-8 flex justify-center">
             <div className="relative">
               <div className="h-40 w-40 overflow-hidden rounded-full shadow-2xl lg:h-60 lg:w-60">
-                <img src="/image/me.jpg" alt="Grace Kim" className="h-full w-full object-cover" />
+                <Image
+                  src="/image/me.jpg"
+                  alt="Grace Kim"
+                  width={240}
+                  height={240}
+                  className="h-full w-full object-cover"
+                />
               </div>
               <div className="absolute -top-3 -right-3 h-16 w-16 animate-pulse rounded-full bg-gradient-to-br from-purple-400 to-pink-400 opacity-20"></div>
               <div

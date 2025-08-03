@@ -6,7 +6,7 @@ import MovingTextBackground from './components/MovingTextBackground'
 
 export function IntroSection() {
   return (
-    <section className="relative min-h-screen bg-gray-950">
+    <section className="relative bg-gray-950">
       <div className="absolute inset-0 z-0">
         <MovingTextBackground />
       </div>
