@@ -106,26 +106,6 @@ export default function ActivityCard({ activity, index }: ActivityCardProps) {
           </div>
         </div>
 
-        {/* 한 줄 요약 */}
-        <div className="mb-4">
-          <p className="leading-relaxed text-gray-300">{activity.summary}</p>
-        </div>
-
-        {/* 핵심 역할 및 성과 */}
-        <div className="mb-4">
-          <h4 className="mb-2 text-sm font-semibold text-gray-200">🎯 핵심 역할 및 성과</h4>
-          <ul className="space-y-1.5">
-            {activity.keyResponsibilities.map((responsibility, idx) => (
-              <li key={idx} className="flex items-start gap-2 text-sm text-gray-400">
-                <span
-                  className={`mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gradient-to-r ${getAccentColor(index)}`}
-                />
-                <span className="leading-relaxed">{responsibility}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
         {/* 배우고 느낀 점 */}
         <div className="mb-4">
           <h4 className="mb-2 text-sm font-semibold text-gray-200">💡 배우고 느낀 점</h4>

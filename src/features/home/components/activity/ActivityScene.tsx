@@ -125,8 +125,9 @@ export default function ActivityScene() {
               </span>
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-gray-400">
-              지난 몇 년간 경험한 다양한 활동들과 그 속에서 얻은 성장의 이야기들입니다.
-              <br />각 경험들이 개발자로서의 저를 만들어왔습니다.
+              코드와 사람이 함께 성장하는 &apos;생태계&apos;를 만드는 일에 가치를 둡니다.
+              <br />
+              기술의 즐거움을 나누고 새로운 기회를 만들어온 과정 속에서 개발자로서 단단해졌습니다.
             </p>
           </div>
         </div>
@@ -159,7 +160,7 @@ export default function ActivityScene() {
                 </div>
 
                 {/* 해당 연도의 활동들 */}
-                <div className="w-full space-y-8 sm:ml-0 md:ml-8">
+                <div className="w-full space-y-8">
                   {yearData.activities.map((activity, activityIndex) => (
                     <div
                       key={activity.id}
@@ -177,7 +178,7 @@ export default function ActivityScene() {
           <div className="relative mt-8">
             <div className="absolute -left-2 h-4 w-4 rounded-full bg-gradient-to-r from-gray-600 to-gray-800 opacity-50 md:-left-6" />
             <div className="ml-8 text-gray-500 md:ml-12">
-              <span className="font-mono text-sm">• • • and more to come</span>
+              <span className="font-mono text-sm">generating • • •</span>
             </div>
           </div>
         </div>

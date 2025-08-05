@@ -5,8 +5,6 @@ export interface Activity {
   organization: string
   period: string
   year: number
-  summary: string
-  keyResponsibilities: string[]
   whatILearned: string
   links?: {
     title: string
