@@ -103,9 +103,9 @@ export default function AboutScene() {
   return (
     <section
       ref={sectionRef}
-      className="m-auto flex min-h-screen w-[80%] items-center justify-center"
+      className="m-auto flex min-h-screen w-full items-center justify-center sm:w-[80%]"
     >
-      <div className="container m-auto px-8">
+      <div className="container m-auto px-4">
         <div className="mb-6 text-center">
           <div ref={titleRef} className="mb-8">
             <h2 className="mb-4 text-4xl font-black text-gray-600 lg:text-5xl">
@@ -136,7 +136,7 @@ export default function AboutScene() {
           </div>
 
           <div ref={introTextRef} className="mx-auto max-w-3xl">
-            <p className="text-xl leading-relaxed text-gray-400">
+            <p className="text-lg leading-relaxed text-gray-400 md:text-xl">
               안녕하세요! <br />
               <span className="font-semibold text-gray-200">
                 사용자 경험을 최우선으로 고민하고, 함께 성장하는 문화를 지향하는

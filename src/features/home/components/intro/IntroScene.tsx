@@ -57,7 +57,13 @@ export default function IntroScene() {
       .to(
         [frontendRef.current, devRef.current],
         {
-          fontSize: '120px',
+          fontSize: () => {
+            if (window.innerWidth < 640) return '40px'
+            if (window.innerWidth < 768) return '60px'
+            if (window.innerWidth < 1024) return '100px'
+            if (window.innerWidth < 1280) return '140px'
+            return '160px'
+          },
           opacity: 1,
           duration: 0.3,
           ease: 'power4.out',
@@ -84,35 +90,38 @@ export default function IntroScene() {
   }, [])
 
   return (
-    <section className="m-auto flex min-h-screen w-[80%] flex-col justify-center gap-4 text-5xl font-bold text-white">
-      <div className="flex items-center gap-10">
+    <section className="m-auto flex min-h-screen w-[90%] flex-col justify-center gap-2 text-5xl font-bold text-white sm:w-full sm:gap-3 md:w-[80%] md:gap-4">
+      <div className="flex items-center gap-2 sm:gap-6 md:gap-10">
         <div
           ref={frontendRef}
-          className="pointer-events-none text-[160px] font-black tracking-tight"
+          className="pointer-events-none text-[40px] font-black tracking-tight sm:text-[60px] md:text-[100px] lg:text-[140px] xl:text-[160px]"
         >
           FRONTEND
         </div>
-        <div ref={devRef} className="pointer-events-none text-[160px] font-black tracking-tight">
+        <div
+          ref={devRef}
+          className="pointer-events-none text-[40px] font-black tracking-tight sm:text-[60px] md:text-[100px] lg:text-[140px] xl:text-[160px]"
+        >
           DEV
         </div>
       </div>
-      <div className="flex justify-start gap-10">
+      <div className="flex justify-start gap-2 sm:gap-6 md:gap-10">
         <div
           ref={graceRef}
-          className="grace-border pointer-events-none text-[120px] font-black tracking-tight text-transparent transition-all"
+          className="grace-border pointer-events-none text-[50px] font-black tracking-tight text-transparent transition-all sm:text-[70px] md:text-[90px] lg:text-[110px] xl:text-[120px]"
         >
           GRACE
         </div>
         <div
           ref={kimRef}
-          className="kim-border pointer-events-none text-[120px] font-black tracking-tight text-transparent transition-all"
+          className="kim-border pointer-events-none text-[50px] font-black tracking-tight text-transparent transition-all sm:text-[70px] md:text-[90px] lg:text-[110px] xl:text-[120px]"
         >
           KIM
         </div>
       </div>
       <div
         ref={portfolioRef}
-        className="portfolio-border pointer-events-none mx-auto translate-y-5 rotate-180 pl-10 text-[100px] font-black text-transparent"
+        className="portfolio-border pointer-events-none mx-auto translate-y-5 rotate-180 pl-4 text-[40px] font-black text-transparent sm:pl-6 sm:text-[60px] md:pl-10 md:text-[80px] lg:text-[90px] xl:text-[100px]"
       >
         PORTFOLIO
       </div>

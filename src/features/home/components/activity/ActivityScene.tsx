@@ -115,7 +115,7 @@ export default function ActivityScene() {
       ref={sectionRef}
       className="m-auto flex min-h-screen items-start justify-center py-20 sm:w-[90%] md:w-[80%] lg:w-[60%]"
     >
-      <div className="container m-auto px-8">
+      <div className="container m-auto px-4">
         <div className="mb-20 text-center">
           <div ref={titleRef}>
             <h2 className="mb-4 text-5xl font-black text-gray-600 lg:text-6xl">

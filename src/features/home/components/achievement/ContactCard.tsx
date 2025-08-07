@@ -101,7 +101,7 @@ export default function ContactCard({ contactInfo }: ContactCardProps) {
               </p>
             </div>
 
-            <div ref={iconsRef} className="flex items-center gap-4">
+            <div ref={iconsRef} className="flex flex-wrap items-center gap-4">
               <button
                 onClick={handleEmailClick}
                 className="group/btn relative flex items-center gap-3 rounded-xl border border-red-500/30 bg-gradient-to-r from-red-500/20 to-pink-500/20 px-4 py-3 transition-all duration-300 hover:border-red-500/50 hover:from-red-500/30 hover:to-pink-500/30"

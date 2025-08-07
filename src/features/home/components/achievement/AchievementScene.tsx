@@ -94,7 +94,7 @@ export default function AchievementScene() {
       data-section="achievement"
       className="relative min-h-screen bg-gray-950 py-20"
     >
-      <div className="relative z-10 mx-auto max-w-7xl px-6">
+      <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="mb-20 text-center">
           <div ref={titleRef}>
             <h2 className="mb-4 text-5xl font-black text-gray-600 lg:text-6xl">

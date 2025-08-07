@@ -64,7 +64,7 @@ export default function CodeScrambleBackground() {
   }, [])
 
   return (
-    <div className="pointer-events-none inset-0 z-0 overflow-hidden">
+    <div className="pointer-events-none inset-0 z-0 hidden overflow-hidden md:block">
       <div ref={containerRef} className="absolute top-1/2 left-16 -translate-y-1/2 opacity-50">
         <div className="max-w-sm">
           <div className="rounded-lg bg-gray-950/70 p-4 font-mono text-xs leading-relaxed backdrop-blur-sm">
@@ -177,6 +177,7 @@ export default function CodeScrambleBackground() {
                 </span>
               </div>
               <div className="flex">
+                <span className="text-gray-500">{'}'}</span>
                 <span className="text-gray-500">{'}'}</span>
               </div>
 

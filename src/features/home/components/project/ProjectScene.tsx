@@ -130,9 +130,9 @@ export default function ProjectScene() {
     <>
       <section
         ref={sectionRef}
-        className="m-auto flex min-h-screen w-[80%] items-center justify-center py-20"
+        className="m-auto flex min-h-screen w-full items-center justify-center py-20 sm:w-[80%]"
       >
-        <div className="container m-auto px-8">
+        <div className="container m-auto px-4">
           <div className="mb-16 text-center">
             <div ref={titleRef}>
               <h2 className="mb-4 text-4xl font-black text-gray-600 lg:text-5xl">
