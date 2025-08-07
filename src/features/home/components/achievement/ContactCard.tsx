@@ -3,6 +3,7 @@
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ContactInfo } from '../../types/achievement'
+import * as gtag from '@/libs/gtag'
 
 interface ContactCardProps {
   contactInfo: ContactInfo
@@ -67,16 +68,31 @@ export default function ContactCard({ contactInfo }: ContactCardProps) {
 
   const handleEmailClick = () => {
     window.location.href = `mailto:${contactInfo.email}`
+    gtag.event('select_content', {
+      event_category: 'contact',
+      event_label: contactInfo.email,
+      value: 1, // 1: email, 2: github, 3: linkedin
+    })
   }
 
   const handleGithubClick = () => {
     window.open(contactInfo.github, '_blank', 'noopener,noreferrer')
+    gtag.event('select_content', {
+      event_category: 'contact',
+      event_label: contactInfo.github,
+      value: 2, // 1: email, 2: github, 3: linkedin
+    })
   }
 
   const handleLinkedinClick = () => {
     if (contactInfo.linkedin) {
       window.open(contactInfo.linkedin, '_blank', 'noopener,noreferrer')
     }
+    gtag.event('select_content', {
+      event_category: 'contact',
+      event_label: contactInfo.linkedin,
+      value: 3, // 1: email, 2: github, 3: linkedin
+    })
   }
 
   return (
