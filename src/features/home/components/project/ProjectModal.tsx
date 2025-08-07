@@ -159,7 +159,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                     key={index}
                     className="flex items-center gap-2 rounded-lg bg-gray-800/50 px-4 py-2"
                   >
-                    <img src={tech.icon} alt={tech.name} width={16} height={16} />
+                    <img src={tech.icon} alt={tech.name} width={16} height={16} loading="lazy" />
                     <span className={`font-medium text-white`}>{tech.name}</span>
                   </div>
                 ))}
@@ -220,6 +220,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                       alt="GitHub"
                       width={16}
                       height={16}
+                      loading="lazy"
                     />
                     GitHub Repository
                   </a>

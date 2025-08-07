@@ -123,7 +123,7 @@ export default function ContactCard({ contactInfo }: ContactCardProps) {
                 className="group/btn relative flex items-center gap-3 rounded-xl border border-red-500/30 bg-gradient-to-r from-red-500/20 to-pink-500/20 px-4 py-3 transition-all duration-300 hover:border-red-500/50 hover:from-red-500/30 hover:to-pink-500/30"
                 title={contactInfo.email}
               >
-                <img src="https://skillicons.dev/icons?i=gmail" className="h-5 w-5" />
+                <img src="https://skillicons.dev/icons?i=gmail" className="h-5 w-5" alt="gmail" />
                 <span className="text-sm font-medium text-red-200 transition-colors group-hover/btn:text-white">
                   Email
                 </span>
@@ -134,7 +134,7 @@ export default function ContactCard({ contactInfo }: ContactCardProps) {
                 className="group/btn relative flex items-center gap-3 rounded-xl border border-gray-500/30 bg-gradient-to-r from-gray-600/20 to-slate-600/20 px-4 py-3 transition-all duration-300 hover:border-gray-500/50 hover:from-gray-600/30 hover:to-slate-600/30"
                 title="GitHub Profile"
               >
-                <img src="https://skillicons.dev/icons?i=github" className="h-5 w-5" />
+                <img src="https://skillicons.dev/icons?i=github" className="h-5 w-5" alt="github" />
                 <span className="text-sm font-medium text-gray-200 transition-colors group-hover/btn:text-white">
                   GitHub
                 </span>
@@ -145,7 +145,11 @@ export default function ContactCard({ contactInfo }: ContactCardProps) {
                 className="group/btn relative flex items-center gap-3 rounded-xl border border-blue-500/30 bg-gradient-to-r from-blue-600/20 to-blue-500/20 px-4 py-3 transition-all duration-300 hover:border-blue-500/50 hover:from-blue-600/30 hover:to-blue-500/30"
                 title="LinkedIn Profile"
               >
-                <img src="https://skillicons.dev/icons?i=linkedin" className="h-5 w-5" />
+                <img
+                  src="https://skillicons.dev/icons?i=linkedin"
+                  className="h-5 w-5"
+                  alt="linkedin"
+                />
                 <span className="text-sm font-medium text-blue-200 transition-colors group-hover/btn:text-white">
                   LinkedIn
                 </span>
