@@ -3,6 +3,8 @@
 import type { Metadata } from 'next'
 import '@/styles/globals.css'
 import GoogleAnalytics from '@/features/googleAnalytics/GoogleAnalytics'
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages } from 'next-intl/server'
 
 export const metadata: Metadata = {
   title: '프론트엔드 개발자 Grace | 사용자 경험을 설계합니다',
@@ -15,11 +17,26 @@ export const metadata: Metadata = {
   },
 }
 
-export default function LocaleLayout({ children }: { children: React.ReactNode }) {
+export default async function LocaleLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
+  let messages
+  try {
+    messages = await getMessages({ locale })
+  } catch (error) {
+    console.error(error)
+  }
+
   return (
-    <html lang="ko" className="scroll-smooth">
+    <html lang={locale} className="scroll-smooth">
       <body className="overflow-x-hidden antialiased">
-        {children}
+        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
         <GoogleAnalytics />
       </body>
     </html>

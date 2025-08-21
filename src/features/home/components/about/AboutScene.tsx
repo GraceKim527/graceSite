@@ -4,10 +4,12 @@ import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useTranslations } from 'next-intl'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function AboutScene() {
+  const t = useTranslations('about')
   const sectionRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
@@ -137,12 +139,10 @@ export default function AboutScene() {
 
           <div ref={introTextRef} className="mx-auto max-w-3xl">
             <p className="text-lg leading-relaxed text-gray-400 md:text-xl">
-              안녕하세요! <br />
-              <span className="font-semibold text-gray-200">
-                사용자 경험을 최우선으로 고민하고, 함께 성장하는 문화를 지향하는
-              </span>
+              {t('greeting')} <br />
+              <span className="font-semibold text-gray-200">{t('introLine1')}</span>
               <br />
-              프론트엔드 개발자 김은혜입니다.
+              {t('introLine2')}
             </p>
           </div>
         </div>
