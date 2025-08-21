@@ -1,5 +1,7 @@
+// src/app/[locale]/layout.tsx
+
 import type { Metadata } from 'next'
-import '../styles/globals.css'
+import '@/styles/globals.css'
 import GoogleAnalytics from '@/features/googleAnalytics/GoogleAnalytics'
 
 export const metadata: Metadata = {
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function LocaleLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko" className="scroll-smooth">
       <body className="overflow-x-hidden antialiased">
