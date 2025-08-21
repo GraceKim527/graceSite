@@ -2,6 +2,30 @@
   "about": {
     "greeting": "Hello!",
     "introLine1": "I prioritize user experience and value a culture of growth through collaboration.",
-    "introLine2": "I'm Grace Kim, a frontend developer."
+    "introLine2": "I'm Grace Kim, a frontend developer.",
+    "card1": {
+      "title": "💡 User-Centered Experience",
+      "description": "To provide an intuitive and engaging user experience, I always start development by <highlight>thinking deeply about UI/UX</highlight>. I prioritize delivering a consistent interface across various devices and am well-versed in responsive web design and accessibility-focused UI planning."
+    },
+    "card2": {
+      "title": "🤝 A Culture of Growth Together",
+      "description": "I value a culture of growing together through knowledge sharing and teamwork. I’ve led planning and operations with various members in activities such as <highlight>9oormthon Univ</highlight> and internal hackathons."
+    },
+    "card3": {
+      "title": "🚀 Challenge and Growth in Technology",
+      "description": "I feel <highlight>curiosity and excitement</highlight> rather than fear when learning new technologies. I continuously explore and adapt to the evolving development landscape, including modern frontend technologies and AI tools."
+    },
+    "name": "Grace Kim",
+    "motto": "I enjoy the joy of learning and building things",
+    "values": "I enjoy the joy of learning and building things"
+  },
+  "project": {
+    "description": "Projects I've worked on. <br></br> Click on a project to see more details.",
+    "featuredProjects": "Let me introduce you to some of my projects.",
+    "moreProjects": "View more projects",
+    "moreProjectsDescription": "Various development experiences and challenges"
+  },
+  "activity": {
+    "description": "I believe in building ecosystems where code and people thrive together. <br></br>The process of sharing my passion for tech and pioneering new opportunities has solidified my foundation as a developer."
   }
 }

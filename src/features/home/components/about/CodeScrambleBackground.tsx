@@ -3,10 +3,12 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin'
+import { useTranslations } from 'next-intl'
 
 gsap.registerPlugin(ScrambleTextPlugin)
 
 export default function CodeScrambleBackground() {
+  const t = useTranslations('about')
   const containerRef = useRef<HTMLDivElement>(null)
   const nameRef = useRef<HTMLSpanElement>(null)
   const roleRef = useRef<HTMLSpanElement>(null)
@@ -24,14 +26,14 @@ export default function CodeScrambleBackground() {
       })
 
       const scrambleTargets = [
-        { ref: nameRef, text: 'return "김은혜"' },
+        { ref: nameRef, text: `return "${t('name')}"` },
         { ref: roleRef, text: 'return "Frontend Developer, Leader"' },
         {
           ref: skillsRef,
           text: 'return ["React", "TypeScript", "Next.js", "Zustand", "React Query", "Tailwind CSS", "GSAP", "Framer"]',
         },
-        { ref: mottoRef, text: 'return "다양한 경험을 통해 성장하는 개발자"' },
-        { ref: valuesRef, text: 'return "함께 성장하는 문화를 추구하는 개발자"' },
+        { ref: mottoRef, text: `return "${t('motto')}"` },
+        { ref: valuesRef, text: `return "${t('values')}"` },
         { ref: communitySkillsRef, text: 'return ["Figma", "Notion", "Slack"]' },
         { ref: softSkillsRef, text: 'return ["Communication", "Teamwork", "Problem Solving"]' },
       ]

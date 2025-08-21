@@ -7,10 +7,12 @@ import ProjectCard from './ProjectCard'
 import ProjectModal from './ProjectModal'
 import { sampleProjects } from '../../data/projects'
 import { Project } from '../../types/project'
+import { useTranslations } from 'next-intl'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function ProjectScene() {
+  const t = useTranslations('project')
   const sectionRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLDivElement>(null)
   const featuredGridRef = useRef<HTMLDivElement>(null)
@@ -142,8 +144,9 @@ export default function ProjectScene() {
                 </span>
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-gray-400">
-                사용자 경험을 중심으로 한 프론트엔드 개발 프로젝트들입니다.
-                <br />각 프로젝트를 클릭하여 자세한 내용을 확인해보세요.
+                {t.rich('description', {
+                  br: () => <br />,
+                })}
               </p>
             </div>
           </div>
@@ -152,7 +155,7 @@ export default function ProjectScene() {
           <div className="mb-12">
             <div className="mb-8 text-center">
               <h3 className="text-2xl font-bold text-purple-300">✨ Featured Projects</h3>
-              <p className="mt-2 text-gray-400">주요 프로젝트들을 소개합니다</p>
+              <p className="mt-2 text-gray-400">{t('featuredProjects')}</p>
             </div>
 
             <div ref={featuredGridRef} className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -176,7 +179,7 @@ export default function ProjectScene() {
                 className="group cursor-pointer rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-3 font-semibold text-white transition-all duration-300 hover:scale-105 hover:from-purple-700 hover:to-blue-700"
               >
                 <span className="flex items-center gap-2">
-                  더 많은 프로젝트 보기
+                  {t('moreProjects')}
                   <svg
                     className="h-5 w-5 transition-transform group-hover:translate-x-1"
                     fill="none"
@@ -200,7 +203,7 @@ export default function ProjectScene() {
             <div>
               <div className="mb-8 text-center">
                 <h3 className="text-2xl font-bold text-green-300">🚀 More Projects</h3>
-                <p className="mt-2 text-gray-400">다양한 개발 경험과 도전들</p>
+                <p className="mt-2 text-gray-400">{t('moreProjectsDescription')}</p>
               </div>
 
               <div

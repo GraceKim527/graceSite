@@ -154,13 +154,14 @@ export default function AboutScene() {
               className="cursor-pointer rounded-lg border border-purple-800/20 bg-gradient-to-r from-purple-950/30 to-pink-950/30 p-6 transition-all duration-300"
             >
               <h3 className="mb-3 flex items-center text-lg font-bold text-purple-300">
-                💡 사용자 경험 중심
+                {t('card1.title')}
               </h3>
               <p className="text-sm leading-relaxed text-gray-300">
-                직관적이고 감각적인 사용자 경험을 제공하기 위해, 개발의 출발점을 항상{' '}
-                <span className="font-semibold text-purple-400">UI/UX 고민에서 시작</span>
-                합니다. 다양한 기기 환경에서도 일관된 인터페이스를 제공하는 것을 중요하게 여기며,
-                반응형 웹 개발과 접근성 중심의 화면 설계에 익숙합니다.
+                {t.rich('card1.description', {
+                  highlight: (chunks) => (
+                    <span className="font-semibold text-purple-400">{chunks}</span>
+                  ),
+                })}
               </p>
             </div>
 
@@ -169,12 +170,14 @@ export default function AboutScene() {
               className="cursor-pointer rounded-lg border border-blue-800/20 bg-gradient-to-r from-blue-950/30 to-cyan-950/30 p-6 transition-all duration-300"
             >
               <h3 className="mb-3 flex items-center text-lg font-bold text-blue-300">
-                🤝 함께 성장하는 문화
+                {t('card2.title')}
               </h3>
               <p className="text-sm leading-relaxed text-gray-300">
-                지식 공유와 팀워크를 통해 함께 성장하는 문화를 소중히 생각합니다. <br /> 전국 IT
-                연합 <span className="font-semibold text-blue-400">&apos;구름톤 유니브&apos;</span>,
-                자체 해커톤 등에서 기획과 운영을 주도하며 다양한 구성원과 협업했습니다.
+                {t.rich('card2.description', {
+                  highlight: (chunks) => (
+                    <span className="font-semibold text-blue-400">{chunks}</span>
+                  ),
+                })}
               </p>
             </div>
 
@@ -183,13 +186,14 @@ export default function AboutScene() {
               className="cursor-pointer rounded-lg border border-green-800/20 bg-gradient-to-r from-green-900/30 to-emerald-900/30 p-6 transition-all duration-300"
             >
               <h3 className="mb-3 flex items-center text-lg font-bold text-green-300">
-                🚀 기술 도전과 성장
+                {t('card3.title')}
               </h3>
               <p className="text-sm leading-relaxed text-gray-300">
-                새로운 기술을 배우는 과정에서 두려움보다{' '}
-                <span className="font-semibold text-green-400">호기심과 설렘</span>을 느낍니다. 최신
-                프론트엔드 기술은 물론, AI 도구 등 변화하는 개발 환경에 빠르게 적응하고자 끊임없이
-                탐구합니다.
+                {t.rich('card3.description', {
+                  highlight: (chunks) => (
+                    <span className="font-semibold text-green-400">{chunks}</span>
+                  ),
+                })}
               </p>
             </div>
           </div>

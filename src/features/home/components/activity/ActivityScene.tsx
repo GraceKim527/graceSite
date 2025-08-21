@@ -5,10 +5,12 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ActivityCard from './ActivityCard'
 import { getActivitiesByYear } from '../../data/activities'
+import { useTranslations } from 'next-intl'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function ActivityScene() {
+  const t = useTranslations('activity')
   const sectionRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLDivElement>(null)
   const timelineRef = useRef<HTMLDivElement>(null)
@@ -125,9 +127,9 @@ export default function ActivityScene() {
               </span>
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-gray-400">
-              코드와 사람이 함께 성장하는 &apos;생태계&apos;를 만드는 일에 가치를 둡니다.
-              <br />
-              기술의 즐거움을 나누고 새로운 기회를 만들어온 과정 속에서 개발자로서 단단해졌습니다.
+              {t.rich('description', {
+                br: () => <br />,
+              })}
             </p>
           </div>
         </div>
