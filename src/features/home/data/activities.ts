@@ -9,6 +9,7 @@ export const activities: Activity[] = [
     organization: 'kakao, goorm',
     period: '2025.01 - current',
     year: 2025,
+    type: 'community',
     whatILearned:
       '목표 설정부터 팀 빌딩, 업무 분배. 하나의 대규모 조직을 이끌어가는 리더십을 직접 경험했습니다. 특히 참가자, 운영진, 스폰서 기업 등 다양한 이해관계자 사이의 복잡한 의사소통을 조율하며 효과적인 커뮤니케이션 역량을 길렀습니다. 예상치 못한 문제에 직면했을 때, 팀원들과 함께 해결책을 찾아 실행하는 과정에서 위기관리 능력과 실질적인 문제 해결 능력을 키울 수 있었습니다.',
     links: [
@@ -28,6 +29,7 @@ export const activities: Activity[] = [
     organization: '성공회대학교 스쿠톤 (SKHUthon)',
     period: '2024.03 - 2024.07',
     year: 2024,
+    type: 'community',
     whatILearned:
       "단순한 일회성 행사를 넘어 '사람'을 연결하는 것이 커뮤니티의 핵심임을 깨달았고, 졸업생과 재학생을 잇는 시도는 교내 IT 생태계에 새로운 활력을 불어넣는 성공적인 전략이었습니다. 이 과정을 통해 한정된 자원으로 최대의 효과를 내는 실용적인 문제 해결 능력을 체득했습니다.",
     links: [
@@ -35,6 +37,30 @@ export const activities: Activity[] = [
         title: '인스타그램 페이지',
         url: 'https://www.instagram.com/skhuthon/',
         type: 'official',
+      },
+    ],
+  },
+
+  {
+    id: 'react-qr-code',
+    title: 'react-qr-code 오픈소스 기여',
+    role: 'Contributor',
+    organization: 'react-qr-code',
+    period: '2025.08',
+    year: 2025,
+    type: 'opensource',
+    whatILearned:
+      '한국어를 포함한 다양한 언어 사용자에게 더 나은 UX를 제공할 수 있다는 점이 무척 뿌듯했고, 처음으로 오픈소스 리뷰를 주고받으며 배운 모든 과정이 값진 경험이었습니다.',
+    links: [
+      {
+        title: 'PR #284 - Feature Enhancement',
+        url: 'https://github.com/rosskhanas/react-qr-code/pull/284',
+        type: 'pr',
+      },
+      {
+        title: 'Issue #283 - Bug Report',
+        url: 'https://github.com/rosskhanas/react-qr-code/issues/283',
+        type: 'issue',
       },
     ],
   },
@@ -47,6 +73,7 @@ export const activities: Activity[] = [
     organization: '멋쟁이사자처럼 성공회대학교 (SKHU)',
     period: '2022.02 - current',
     year: 2022,
+    type: 'community',
     whatILearned:
       "운영진에서 대표, 그리고 멘토로 역할을 전환하며 실무자, 리더, 조언자의 관점을 모두 경험할 수 있었습니다. 단순히 지식을 전달하는 것을 넘어, 함께 성장할 수 있는 '학습 환경'을 설계하고 운영하는 노하우를 체득했습니다. 4년간의 활동을 통해 지속가능한 개발자 커뮤니티를 만들기 위한 장기적인 비전 수립과 실행의 중요성을 깨달았습니다.",
   },

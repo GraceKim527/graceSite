@@ -67,15 +67,28 @@ export default function ActivityCard({ activity, index }: ActivityCardProps) {
         return '📊'
       case 'article':
         return '📰'
+      case 'github':
+        return '🐙'
+      case 'pr':
+        return '🔀'
+      case 'issue':
+        return '🐛'
       default:
         return '🔗'
     }
   }
 
+  const getCardStyle = (activity: Activity, index: number) => {
+    if (activity.type === 'opensource') {
+      return 'border-orange-500/30 hover:border-orange-400/50 bg-gradient-to-br from-orange-950/20 to-amber-950/20'
+    }
+    return getBorderColor(index)
+  }
+
   return (
     <div
       ref={cardRef}
-      className={`group cursor-default rounded-xl border bg-gray-950/90 backdrop-blur-sm transition-all duration-300 ${getBorderColor(index)}`}
+      className={`group cursor-default rounded-xl border backdrop-blur-sm transition-all duration-300 ${getCardStyle(activity, index)}`}
     >
       <div className="p-6">
         <div className="mb-4">

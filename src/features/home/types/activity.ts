@@ -6,10 +6,11 @@ export interface Activity {
   period: string
   year: number
   whatILearned: string
+  type?: 'community' | 'opensource'
   links?: {
     title: string
     url: string
-    type: 'blog' | 'official' | 'presentation' | 'article'
+    type: 'blog' | 'official' | 'presentation' | 'article' | 'pr' | 'issue' | 'github'
   }[]
 }
 

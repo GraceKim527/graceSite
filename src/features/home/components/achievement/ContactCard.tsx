@@ -99,7 +99,7 @@ export default function ContactCard({ contactInfo }: ContactCardProps) {
     <div className="block justify-center lg:flex">
       <div
         ref={cardRef}
-        className="group relative cursor-pointer overflow-hidden rounded-3xl border border-slate-700/50 bg-gradient-to-br from-slate-800/40 via-slate-900/60 to-gray-900/80 shadow-2xl backdrop-blur-xl transition-all duration-500 hover:border-slate-600/70 hover:shadow-slate-500/20"
+        className="group relative overflow-hidden rounded-3xl border border-slate-700/50 bg-gradient-to-br from-slate-800/40 via-slate-900/60 to-gray-900/80 shadow-2xl backdrop-blur-xl transition-all duration-500 hover:border-slate-600/70 hover:shadow-slate-500/20"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-cyan-500/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
@@ -120,7 +120,7 @@ export default function ContactCard({ contactInfo }: ContactCardProps) {
             <div ref={iconsRef} className="flex flex-wrap items-center gap-4">
               <button
                 onClick={handleEmailClick}
-                className="group/btn relative flex items-center gap-3 rounded-xl border border-red-500/30 bg-gradient-to-r from-red-500/20 to-pink-500/20 px-4 py-3 transition-all duration-300 hover:border-red-500/50 hover:from-red-500/30 hover:to-pink-500/30"
+                className="group/btn relative flex cursor-pointer items-center gap-3 rounded-xl border border-red-500/30 bg-gradient-to-r from-red-500/20 to-pink-500/20 px-4 py-3 transition-all duration-300 hover:border-red-500/50 hover:from-red-500/30 hover:to-pink-500/30"
                 title={contactInfo.email}
               >
                 <img src="https://skillicons.dev/icons?i=gmail" className="h-5 w-5" alt="gmail" />
@@ -131,7 +131,7 @@ export default function ContactCard({ contactInfo }: ContactCardProps) {
 
               <button
                 onClick={handleGithubClick}
-                className="group/btn relative flex items-center gap-3 rounded-xl border border-gray-500/30 bg-gradient-to-r from-gray-600/20 to-slate-600/20 px-4 py-3 transition-all duration-300 hover:border-gray-500/50 hover:from-gray-600/30 hover:to-slate-600/30"
+                className="group/btn relative flex cursor-pointer items-center gap-3 rounded-xl border border-gray-500/30 bg-gradient-to-r from-gray-600/20 to-slate-600/20 px-4 py-3 transition-all duration-300 hover:border-gray-500/50 hover:from-gray-600/30 hover:to-slate-600/30"
                 title="GitHub Profile"
               >
                 <img src="https://skillicons.dev/icons?i=github" className="h-5 w-5" alt="github" />
@@ -142,7 +142,7 @@ export default function ContactCard({ contactInfo }: ContactCardProps) {
 
               <button
                 onClick={handleLinkedinClick}
-                className="group/btn relative flex items-center gap-3 rounded-xl border border-blue-500/30 bg-gradient-to-r from-blue-600/20 to-blue-500/20 px-4 py-3 transition-all duration-300 hover:border-blue-500/50 hover:from-blue-600/30 hover:to-blue-500/30"
+                className="group/btn relative flex cursor-pointer items-center gap-3 rounded-xl border border-blue-500/30 bg-gradient-to-r from-blue-600/20 to-blue-500/20 px-4 py-3 transition-all duration-300 hover:border-blue-500/50 hover:from-blue-600/30 hover:to-blue-500/30"
                 title="LinkedIn Profile"
               >
                 <img
