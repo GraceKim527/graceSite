@@ -63,5 +63,5 @@ export const awards: Award[] = [
 export const contactInfo: ContactInfo = {
   email: 'k07173027@gmail.com',
   github: 'https://github.com/GraceKim527',
-  linkedin: 'https://www.linkedin.com/in/%EC%9D%80%ED%98%9C-%EA%B9%80-a98184348/',
+  linkedin: 'https://www.linkedin.com/in/eunhye-kim-a98184348/',
 }
