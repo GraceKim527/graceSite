@@ -158,7 +158,7 @@ export default function ProjectScene() {
               <p className="mt-2 text-gray-400">{t('featuredProjects')}</p>
             </div>
 
-            <div ref={featuredGridRef} className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div ref={featuredGridRef} className="grid grid-cols-1 gap-8 xl:grid-cols-3">
               {featuredProjects.map((project, index) => (
                 <ProjectCard
                   key={project.id}

@@ -159,8 +159,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                     key={index}
                     className="flex items-center gap-2 rounded-lg bg-gray-800/50 px-4 py-2"
                   >
-                    <img src={tech.icon} alt={tech.name} width={16} height={16} loading="lazy" />
-                    <span className={`font-medium text-white`}>{tech.name}</span>
+                    <span className={`font-medium text-white`}>{tech}</span>
                   </div>
                 ))}
               </div>
@@ -182,23 +181,17 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
               </div>
             </section>
 
-            {/* 어려웠던 점과 해결 과정 */}
+            {/* 내가 기여한 부분 */}
             <section className="mb-8">
-              <h3 className="mb-4 text-lg font-bold text-orange-300">🚧 어려웠던 점과 해결 과정</h3>
+              <h3 className="mb-4 text-lg font-bold text-blue-300">⚒️ 내가 기여한 부분</h3>
               <div className="space-y-6">
                 {project.challenges.map((challenge, index) => (
                   <div
                     key={index}
-                    className="rounded-lg bg-gradient-to-r from-orange-950/30 to-red-950/30 p-4"
+                    className="flex items-center gap-3 rounded-lg bg-blue-950/30 p-4"
                   >
-                    <div className="mb-3">
-                      <h4 className="mb-2 font-semibold text-orange-300">💥 문제</h4>
-                      <p className="text-gray-300">{challenge.problem}</p>
-                    </div>
-                    <div>
-                      <h4 className="mb-2 font-semibold text-green-300">💡 해결</h4>
-                      <p className="text-gray-300">{challenge.solution}</p>
-                    </div>
+                    <span className="text-blue-400">▶</span>
+                    <p className="text-gray-200">{challenge}</p>
                   </div>
                 ))}
               </div>

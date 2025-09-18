@@ -1,14 +1,9 @@
-export interface TechStack {
-  name: string
-  icon: string
-}
-
 export interface Project {
   id: string
   title: string
   description: string
   image: string
-  techStack: TechStack[]
+  techStack: string[]
   githubUrl?: string
   liveUrl?: string
   contribution?: string
@@ -22,8 +17,5 @@ export interface Project {
     teamSize?: string
   }
   features: string[]
-  challenges: {
-    problem: string
-    solution: string
-  }[]
+  challenges: string[]
 }

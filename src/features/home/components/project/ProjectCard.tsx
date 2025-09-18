@@ -94,8 +94,7 @@ export default function ProjectCard({ project, onClick, index }: ProjectCardProp
                 key={techIndex}
                 className="flex items-center gap-1 rounded-full bg-gray-800/50 px-3 py-1 text-xs"
               >
-                <img src={tech.icon} alt={tech.name} width={16} height={16} loading="lazy" />
-                <span className={`font-medium text-white`}>{tech.name}</span>
+                <span className={`font-medium text-white`}>{tech}</span>
               </div>
             ))}
             {project.techStack.length > 4 && (
